@@ -12,17 +12,18 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  // Smooth scroll for internal links
+  // Smooth scroll for internal links (takes header into account)
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
       const targetId = this.getAttribute('href');
-      if (targetId === '#') return;
+      if (!targetId || targetId === '#') return;
       const target = document.querySelector(targetId);
       if (target) {
         e.preventDefault();
         const yOffset = -72; // adjust for fixed header
         const y = target.getBoundingClientRect().top + window.pageYOffset + yOffset;
         window.scrollTo({ top: y, behavior: 'smooth' });
+
         // Close mobile nav if open
         if (nav.classList.contains('open')) {
           nav.classList.remove('open');
@@ -60,4 +61,19 @@ document.addEventListener("DOMContentLoaded", function () {
       }, 900);
     });
   })();
+
+  // Accessibility: allow horizontal lists to be keyboard-scrollable with arrow keys when focused
+  document.querySelectorAll('.horizontal-list').forEach(list => {
+    list.setAttribute('tabindex', '0'); // make focusable
+    list.addEventListener('keydown', (e) => {
+      const key = e.key;
+      if (key === 'ArrowRight') {
+        e.preventDefault();
+        list.scrollBy({ left: 260, behavior: 'smooth' });
+      } else if (key === 'ArrowLeft') {
+        e.preventDefault();
+        list.scrollBy({ left: -260, behavior: 'smooth' });
+      }
+    });
+  });
 });
