@@ -142,9 +142,6 @@ nav a:hover, nav a:focus{
   margin-bottom:18px;
 }
 
-/* small social hint (removed from top per request) */
-/* keep visually subtle if needed later */
-
 /* profile image / card */
 .home-image{
   width:260px;
@@ -251,6 +248,8 @@ footer{
   background: linear-gradient(0deg, rgba(255,255,255,0.01), transparent);
   border-top:1px solid rgba(255,255,255,0.03);
 }
+
+/* Keep footer-inner visible for overflow (prevents ancestor clipping of horizontal scroll) */
 .footer-inner{
   max-width:var(--max-width);
   margin:0 auto;
@@ -260,13 +259,30 @@ footer{
   justify-content:space-between;
   gap:12px;
   flex-wrap:wrap;
+  /* ensure children can overflow horizontally if needed */
+  overflow: visible;
 }
+
+/* left text */
 .footer-left{color:var(--muted); font-size:15px}
+
+/* SOCIAL - updated to support horizontal scrolling on small screens */
 .social-footer{
   display:flex;
   gap:12px;
   align-items:center;
+
+  /* Horizontal scroll when items overflow */
+  overflow-x:auto;
+  -webkit-overflow-scrolling: touch; /* momentum scrolling on iOS */
+  scrollbar-width: thin; /* Firefox */
+
+  /* Optional: enable scroll snapping for nicer UX */
+  scroll-snap-type: x proximity;
+  padding-bottom:6px; /* space for scrollbar on some browsers */
 }
+
+/* make each link non-shrinking so they stay inline and scroll instead of wrapping */
 .social-footer a{
   display:inline-flex;
   align-items:center;
@@ -279,11 +295,23 @@ footer{
   border:1px solid rgba(255,255,255,0.03);
   transition:all .18s ease;
   font-weight:600;
+
+  flex: 0 0 auto;    /* << important: prevents shrinking so horizontal scroll works */
+  scroll-snap-align: center; /* for snapping */
 }
+
+/* hover */
 .social-footer a:hover{
   background: linear-gradient(90deg,var(--accent),var(--accent-2));
   box-shadow:0 12px 30px rgba(243,156,18,0.12);
   transform:translateY(-4px);
+}
+
+/* custom scrollbar cosmetics (WebKit) */
+.social-footer::-webkit-scrollbar{ height:8px; }
+.social-footer::-webkit-scrollbar-thumb{
+  background: rgba(255,255,255,0.06);
+  border-radius: 6px;
 }
 
 /* Small screens */
@@ -294,6 +322,20 @@ footer{
   .menu-toggle{display:inline-flex}
   .logo{font-size:18px}
   .home-image{width:220px}
+
+  /* Make social footer more touch-friendly on mobile */
+  .social-footer{
+    gap:12px;
+    padding:8px 4px;
+    -webkit-overflow-scrolling: touch;
+    overflow-x:auto;
+    scroll-snap-type: x mandatory;
+  }
+  .social-footer a{
+    flex: 0 0 auto;
+    padding:10px 14px;
+    scroll-snap-align: center;
+  }
 }
 
 /* Accessibility focus */
