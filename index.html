@@ -76,6 +76,8 @@
           <li><a href="#about">About</a></li>
           <li><a href="#skills">Skills</a></li>
           <li><a href="#projects">Projects</a></li>
+          <li><a href="#articles">Articles</a></li>
+          <li><a href="#videos">Videos</a></li>
         </ul>
       </nav>
     </div>
@@ -177,12 +179,106 @@
     </div>
   </section>
 
+  <!-- Articles Section (new) -->
+  <section id="articles">
+    <div class="container">
+      <h2>Articles</h2>
+
+      <div class="horizontal-list" aria-label="Articles list">
+        <!-- Example article card 1 -->
+        <a class="card-link" href="https://medium.com/@gopalpoddar4/how-i-built-notely-a-room-mvvm-app" target="_blank" rel="noopener">
+          <article class="card">
+            <div class="card-thumb" style="background-image:url('images/article-notely-thumb.png');" aria-hidden="true"></div>
+            <div class="card-body">
+              <h3>Building Notely with Room & MVVM</h3>
+              <p class="muted">A deep-dive into architecture, local storage and state handling.</p>
+            </div>
+          </article>
+        </a>
+
+        <!-- Example article card 2 -->
+        <a class="card-link" href="https://medium.com/@gopalpoddar4/firebase-crash-courses" target="_blank" rel="noopener">
+          <article class="card">
+            <div class="card-thumb" style="background-image:url('images/article-firebase-thumb.png');" aria-hidden="true"></div>
+            <div class="card-body">
+              <h3>Firebase for Android — Quick Guide</h3>
+              <p class="muted">Integrating Auth, Firestore, Storage and Cloud functions.</p>
+            </div>
+          </article>
+        </a>
+
+        <!-- Example article card 3 -->
+        <a class="card-link" href="https://medium.com/@gopalpoddar4/jetpack-compose-basics" target="_blank" rel="noopener">
+          <article class="card">
+            <div class="card-thumb" style="background-image:url('images/article-compose-thumb.png');" aria-hidden="true"></div>
+            <div class="card-body">
+              <h3>Jetpack Compose: A Beginner's Path</h3>
+              <p class="muted">Compose basics, theming and state management tips.</p>
+            </div>
+          </article>
+        </a>
+
+        <!-- You can duplicate & edit above blocks to add more articles -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Videos Section (new) -->
+  <section id="videos">
+    <div class="container">
+      <h2>Videos</h2>
+
+      <div class="horizontal-list" aria-label="Videos list">
+        <!-- Example video 1 (YouTube link opens in new tab) -->
+        <a class="card-link" href="https://www.youtube.com/watch?v=EXAMPLE_VIDEO_ID_1" target="_blank" rel="noopener">
+          <article class="card video-card">
+            <div class="card-thumb" style="background-image:url('images/video-notely-thumb.png');" aria-hidden="true">
+              <div class="play-badge" aria-hidden="true">▶</div>
+            </div>
+            <div class="card-body">
+              <h3>Notely — App walkthrough & architecture</h3>
+              <p class="muted">Overview of features and how the app was built.</p>
+            </div>
+          </article>
+        </a>
+
+        <!-- Example video 2 -->
+        <a class="card-link" href="https://www.youtube.com/watch?v=EXAMPLE_VIDEO_ID_2" target="_blank" rel="noopener">
+          <article class="card video-card">
+            <div class="card-thumb" style="background-image:url('images/video-firebase-thumb.png');" aria-hidden="true">
+              <div class="play-badge" aria-hidden="true">▶</div>
+            </div>
+            <div class="card-body">
+              <h3>Firebase tips for Android developers</h3>
+              <p class="muted">Auth, Firestore and Storage in practice.</p>
+            </div>
+          </article>
+        </a>
+
+        <!-- Example video 3 -->
+        <a class="card-link" href="https://www.youtube.com/watch?v=EXAMPLE_VIDEO_ID_3" target="_blank" rel="noopener">
+          <article class="card video-card">
+            <div class="card-thumb" style="background-image:url('images/video-compose-thumb.png');" aria-hidden="true">
+              <div class="play-badge" aria-hidden="true">▶</div>
+            </div>
+            <div class="card-body">
+              <h3>Jetpack Compose: Animations & best practices</h3>
+              <p class="muted">Simple, practical composition patterns.</p>
+            </div>
+          </article>
+        </a>
+
+        <!-- Add more video cards as needed -->
+      </div>
+    </div>
+  </section>
+
   <!-- Footer (social handles moved here) -->
   <footer>
     <div class="footer-inner container">
       <div class="footer-left">© 2025 Gopal Poddar</div>
 
-      <div class="social-footer">
+      <div class="social-footer" role="navigation" aria-label="Social links">
         <a href="https://github.com/gopalpoddar4" target="_blank" rel="noopener">GitHub</a>
         <a href="https://www.linkedin.com/in/gopalpoddar4" target="_blank" rel="noopener">LinkedIn</a>
         <!-- Instagram uses id for JS deep-link fallback -->
