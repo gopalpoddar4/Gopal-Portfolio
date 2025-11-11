@@ -314,7 +314,98 @@ footer{
   border-radius: 6px;
 }
 
-/* Small screens */
+/* ---------- New: Horizontal lists (Articles & Videos) ---------- */
+/* shared horizontal container */
+.horizontal-list{
+  display:flex;
+  gap:16px;
+  overflow-x:auto;
+  -webkit-overflow-scrolling: touch;
+  padding:12px 8px;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: thin;
+}
+
+/* card anchor wrapper to ensure full-card click */
+.card-link{
+  text-decoration:none;
+  color:inherit;
+  flex: 0 0 auto; /* prevents shrinking; makes cards scrollable horizontally */
+  scroll-snap-align: center;
+  max-width:320px;
+}
+
+/* card style */
+.card{
+  width:320px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), transparent);
+  border-radius:12px;
+  border:1px solid rgba(255,255,255,0.035);
+  overflow:hidden;
+  display:flex;
+  flex-direction:column;
+  transition:transform .18s ease, box-shadow .18s ease;
+  min-height:170px;
+}
+
+/* thumbnail area */
+.card-thumb{
+  height:140px;
+  background-size:cover;
+  background-position:center;
+  background-repeat:no-repeat;
+  position:relative;
+}
+
+/* play badge for videos */
+.video-card .card-thumb .play-badge,
+.play-badge{
+  position:absolute;
+  left:50%;
+  top:50%;
+  transform:translate(-50%,-50%);
+  width:54px;
+  height:54px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-weight:700;
+  font-size:20px;
+  background: linear-gradient(90deg,var(--accent),var(--accent-2));
+  box-shadow:0 10px 30px rgba(243,156,18,0.12);
+}
+
+/* card body text */
+.card-body{
+  padding:12px 14px;
+  display:flex;
+  flex-direction:column;
+  gap:6px;
+  flex:1;
+}
+.card h3{
+  font-size:16px;
+  margin:0;
+  color:var(--accent);
+}
+.card .muted{
+  font-size:13px;
+  color:var(--muted);
+  line-height:1.35;
+}
+
+/* hover / focus */
+.card:hover, .card:focus{
+  transform:translateY(-8px);
+  box-shadow:0 18px 60px rgba(0,0,0,0.6);
+  border-color: rgba(243,156,18,0.22);
+}
+
+/* make sure anything inside the anchor doesn't show default focus outline - handle on anchor */
+.card-link:focus{ outline: 2px solid rgba(243,156,18,0.14); outline-offset:4px; border-radius:12px; }
+
+/* responsive adjustments */
 @media (max-width:900px){
   .home-inner{flex-direction:column-reverse; text-align:center; gap:20px}
   nav ul{display:none; position:absolute; top:72px; right:20px; background:var(--card); padding:12px; border-radius:10px; flex-direction:column; min-width:200px; border:1px solid rgba(255,255,255,0.03)}
@@ -323,19 +414,11 @@ footer{
   .logo{font-size:18px}
   .home-image{width:220px}
 
-  /* Make social footer more touch-friendly on mobile */
-  .social-footer{
-    gap:12px;
-    padding:8px 4px;
-    -webkit-overflow-scrolling: touch;
-    overflow-x:auto;
-    scroll-snap-type: x mandatory;
-  }
-  .social-footer a{
-    flex: 0 0 auto;
-    padding:10px 14px;
-    scroll-snap-align: center;
-  }
+  /* horizontal lists: make cards a bit smaller on narrow screens */
+  .horizontal-list{ gap:12px; padding:10px 6px; }
+  .card, .card-link{ width: 84vw; max-width:300px; }
+  .card-thumb{ height:170px; }
+  .card-body{ padding:12px; }
 }
 
 /* Accessibility focus */
