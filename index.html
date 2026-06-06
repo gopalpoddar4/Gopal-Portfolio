@@ -1,19 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Gopal Poddar | Android App Developer</title>
 
   <!-- Primary meta tags -->
-  <meta name="description" content="Gopal Poddar — Android App Developer skilled in Kotlin, Firebase, Jetpack Compose, and MVVM. Building high-performance Android apps and modern mobile experiences." />
-  <meta name="keywords" content="Gopal Poddar, Android Developer, Kotlin, Firebase, Jetpack Compose, MVVM, Kolhan University, Mobile App Developer, Notely, Resell Panda" />
+  <meta name="description"
+    content="Gopal Poddar — Android App Developer skilled in Kotlin, Firebase, Jetpack Compose, and MVVM. Building high-performance Android apps and modern mobile experiences." />
+  <meta name="keywords"
+    content="Gopal Poddar, Android Developer, Kotlin, Firebase, Jetpack Compose, MVVM, Kolhan University, Mobile App Developer, Notely, Resell Panda" />
   <meta name="author" content="Gopal Poddar" />
   <link rel="canonical" href="https://gopalpoddar4.github.io/" />
 
   <!-- Open Graph / Social Preview -->
   <meta property="og:title" content="Gopal Poddar | Android App Developer" />
-  <meta property="og:description" content="Full-Stack Android App Developer | Kotlin • Firebase • Jetpack Compose — Projects: Notely, KU Buddy, Timeless Truth." />
+  <meta property="og:description"
+    content="Full-Stack Android App Developer | Kotlin • Firebase • Jetpack Compose — Projects: Notely, KU Buddy, Timeless Truth." />
   <meta property="og:image" content="https://gopalpoddar4.github.io/images/gopal.png" />
   <meta property="og:url" content="https://gopalpoddar4.github.io/" />
   <meta property="og:type" content="website" />
@@ -77,6 +81,7 @@
           <li><a href="#about">About</a></li>
           <li><a href="#skills">Skills</a></li>
           <li><a href="#projects">Projects</a></li>
+          <li><a href="#resume">Resume</a></li>
           <li><a href="#articles">Articles</a></li>
           <li><a href="#videos">Videos</a></li>
         </ul>
@@ -90,7 +95,17 @@
       <div class="home-content">
         <h1>Hi, I'm <span>Gopal Poddar</span></h1>
         <p>Full-Stack Android App Developer | Kotlin • Firebase • Jetpack Compose</p>
-        <p style="color:var(--muted); margin-top:12px;">Creator of Notely, KU Buddy & other student-focused apps. Based in India.</p>
+        <p style="color:var(--muted); margin-top:12px;">Creator of Notely, KU Buddy & other student-focused apps. Based
+          in India.</p>
+        <a href="resume.pdf" download class="btn-download-resume" id="download-resume">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+            <polyline points="7 10 12 15 17 10" />
+            <line x1="12" y1="15" x2="12" y2="3" />
+          </svg>
+          Download Resume
+        </a>
       </div>
 
       <div class="home-image">
@@ -106,8 +121,10 @@
     <div class="container">
       <h2>About Me</h2>
       <p>
-        I am a Full-Stack Android App Developer passionate about building high-performance, scalable mobile applications.
-        Skilled in Kotlin, Java, Jetpack Compose, and Firebase — I love crafting apps with clean architecture and seamless user experiences.
+        I am a Full-Stack Android App Developer passionate about building high-performance, scalable mobile
+        applications.
+        Skilled in Kotlin, Java, Jetpack Compose, and Firebase — I love crafting apps with clean architecture and
+        seamless user experiences.
         I combine design thinking with robust development practices to deliver impactful digital solutions. 🚀
       </p>
     </div>
@@ -139,37 +156,113 @@
       <h2>My Projects</h2>
 
       <div class="projects-container">
-        <a href="https://gopalpoddar4.github.io/Notely-Website/" target="_blank" class="project-link" rel="noopener">
-          <div class="project">
-            <h3>Notely</h3>
-            <p>A note-taking app using Room Database and MVVM architecture.</p>
+
+        <!-- Notely -->
+        <div class="project" id="project-notely">
+          <h3>Notely</h3>
+          <p>A note-taking app using Room Database and MVVM architecture.</p>
+          <div class="project-actions">
+            <a href="https://gopalpoddar4.github.io/Notely-Website/" target="_blank" rel="noopener"
+              class="btn-project btn-website">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10" />
+                <line x1="2" y1="12" x2="22" y2="12" />
+                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+              </svg>
+              View Website
+            </a>
           </div>
-        </a>
+        </div>
 
-        <a href="https://www.mediafire.com/file/enlchv9fdsob6kt/Glass_Count_%2528V2.0%2529.apk/file" target="_blank" class="project-link" rel="noopener">
-          <div class="project">
-            <h3>Glass Count</h3>
-            <p>Track your daily water intake with one tap.</p>
+        <!-- Glass Count -->
+        <div class="project" id="project-glasscount">
+          <h3>Glass Count</h3>
+          <p>Track your daily water intake with one tap.</p>
+          <div class="project-actions">
+            <a href="https://www.mediafire.com/file/enlchv9fdsob6kt/Glass_Count_%2528V2.0%2529.apk/file" target="_blank"
+              rel="noopener" class="btn-project btn-website">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                <polyline points="7 10 12 15 17 10" />
+                <line x1="12" y1="15" x2="12" y2="3" />
+              </svg>
+              Download APK
+            </a>
           </div>
-        </a>
+        </div>
 
-      
-
-        <a href="https://resellpanda.vercel.app/" target="_blank" class="project-link" rel="noopener">
-          <div class="project">
-            <h3>Resell Panda</h3>
-            <p>Buy & Sell Second-Hand Books at Unbeatable Prices.</p>
+        <!-- Resell Panda -->
+        <div class="project" id="project-resellpanda">
+          <h3>Resell Panda</h3>
+          <p>Buy & Sell Second-Hand Books at Unbeatable Prices.</p>
+          <div class="project-actions">
+            <a href="https://play.google.com/store/apps/details?id=com.gopalpoddar4.resellpanda" target="_blank"
+              rel="noopener" class="btn-project btn-playstore" data-tooltip="Update with your Play Store URL">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 0 1-.61-.92V2.734a1 1 0 0 1 .609-.92zm10.89 10.893l2.302 2.302-10.937 6.333 8.635-8.635zm3.199-3.199l2.302 1.33-2.764 1.597-2.4-2.4 2.862-2.862 .001.001v-.001zm-3.906-3.196L4.864 .002l10.928 6.31-2 2z" />
+              </svg>
+              View on Play Store
+            </a>
+            <a href="https://resellpanda.vercel.app/" target="_blank" rel="noopener" class="btn-project btn-website">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10" />
+                <line x1="2" y1="12" x2="22" y2="12" />
+                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+              </svg>
+              View Website
+            </a>
           </div>
-        </a>
+        </div>
 
-        <a href="https://gopalpoddar4.github.io/KU-Buddy-Website/" target="_blank" class="project-link" rel="noopener">
-          <div class="project">
-            <h3>KU Buddy</h3>
-            <p>Learning app for Kolhan University students.</p>
+        <!-- KU Buddy -->
+        <div class="project" id="project-kubuddy">
+          <h3>KU Buddy</h3>
+          <p>Learning app for Kolhan University students.</p>
+          <div class="project-actions">
+            <a href="https://play.google.com/store/apps/details?id=in.gopalpoddar.kubuddy_app" target="_blank"
+              rel="noopener" class="btn-project btn-playstore" data-tooltip="Update with your Play Store URL">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 0 1-.61-.92V2.734a1 1 0 0 1 .609-.92zm10.89 10.893l2.302 2.302-10.937 6.333 8.635-8.635zm3.199-3.199l2.302 1.33-2.764 1.597-2.4-2.4 2.862-2.862 .001.001v-.001zm-3.906-3.196L4.864 .002l10.928 6.31-2 2z" />
+              </svg>
+              View on Play Store
+            </a>
+            <a href="https://kubuddy.vercel.app/" target="_blank" rel="noopener" class="btn-project btn-website">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10" />
+                <line x1="2" y1="12" x2="22" y2="12" />
+                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+              </svg>
+              View Website
+            </a>
           </div>
-        </a>
+        </div>
 
-    
+      </div>
+    </div>
+  </section>
+
+  <!-- Resume Section -->
+  <section id="resume">
+    <div class="container">
+      <h2>Resume</h2>
+      <div class="resume-section">
+        <p>Download my latest resume to learn more about my skills, experience, and projects.</p>
+        <a href="resume.pdf" download class="btn-download-resume btn-download-resume--large"
+          id="download-resume-section">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+            <polyline points="7 10 12 15 17 10" />
+            <line x1="12" y1="15" x2="12" y2="3" />
+          </svg>
+          Download Resume
+        </a>
       </div>
     </div>
   </section>
@@ -181,19 +274,26 @@
 
       <div class="horizontal-list" aria-label="Articles list">
         <!-- Example article card 1 -->
-        <a class="card-link" href="https://medium.com/@gopalpoddar4/my-journey-as-an-android-developer-gopal-poddar-e10b8d148351" target="_blank" rel="noopener">
+        <a class="card-link"
+          href="https://medium.com/@gopalpoddar4/my-journey-as-an-android-developer-gopal-poddar-e10b8d148351"
+          target="_blank" rel="noopener">
           <article class="card">
-            <div class="card-thumb" style="background-image:url('images/article-notely-thumb.png');" aria-hidden="true"></div>
+            <div class="card-thumb" style="background-image:url('images/article-notely-thumb.png');" aria-hidden="true">
+            </div>
             <div class="card-body">
               <h3>My Journey as an Android Developer</h3>
-              <p class="muted">I’m Gopal Poddar, a passionate Android App Developer and a B.Sc. IT student at Kolhan University.</p>
+              <p class="muted">I’m Gopal Poddar, a passionate Android App Developer and a B.Sc. IT student at Kolhan
+                University.</p>
             </div>
           </article>
         </a>
 
-         <a class="card-link" href="https://gopalpoddar4.medium.com/resell-panda-a-revolutionary-platform-for-buying-and-selling-old-books-in-india-e90cf7fe4c65" target="_blank" rel="noopener">
+        <a class="card-link"
+          href="https://gopalpoddar4.medium.com/resell-panda-a-revolutionary-platform-for-buying-and-selling-old-books-in-india-e90cf7fe4c65"
+          target="_blank" rel="noopener">
           <article class="card">
-            <div class="card-thumb" style="background-image:url('images/article-notely-thumb.png');" aria-hidden="true"></div>
+            <div class="card-thumb" style="background-image:url('images/article-notely-thumb.png');" aria-hidden="true">
+            </div>
             <div class="card-body">
               <h3>Resell Panda</h3>
               <p class="muted">A Revolutionary Platform for Buying and Selling Old Books in India.</p>
@@ -201,17 +301,20 @@
           </article>
         </a>
 
-       
-        <a class="card-link" href="https://medium.com/@gopalpoddar4/ku-buddy-all-in-one-for-kolhan-university-students-53ad3f8dc050" target="_blank" rel="noopener">
+
+        <a class="card-link"
+          href="https://medium.com/@gopalpoddar4/ku-buddy-all-in-one-for-kolhan-university-students-53ad3f8dc050"
+          target="_blank" rel="noopener">
           <article class="card">
-            <div class="card-thumb" style="background-image:url('images/article-notely-thumb.png');" aria-hidden="true"></div>
+            <div class="card-thumb" style="background-image:url('images/article-notely-thumb.png');" aria-hidden="true">
+            </div>
             <div class="card-body">
               <h3>KU Buddy</h3>
               <p class="muted">All-in-One for Kolhan University Students.</p>
             </div>
           </article>
         </a>
-        
+
 
         <!-- You can duplicate & edit above blocks to add more articles -->
       </div>
@@ -225,7 +328,8 @@
 
       <div class="horizontal-list" aria-label="Videos list">
         <!-- Example video 1 (YouTube link opens in new tab) -->
-        <a class="card-link" href="https://youtube.com/shorts/4DLshsXD2sY?si=76pEJbGLak3onf2W" target="_blank" rel="noopener">
+        <a class="card-link" href="https://youtube.com/shorts/4DLshsXD2sY?si=76pEJbGLak3onf2W" target="_blank"
+          rel="noopener">
           <article class="card video-card">
             <div class="card-thumb" style="background-image:url('images/video-notely-thumb.png');" aria-hidden="true">
               <div class="play-badge" aria-hidden="true">▶</div>
@@ -237,7 +341,7 @@
           </article>
         </a>
 
-        
+
 
         <!-- Add more video cards as needed -->
       </div>
@@ -262,4 +366,5 @@
     </div>
   </footer>
 </body>
+
 </html>
